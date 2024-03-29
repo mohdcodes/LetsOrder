@@ -1,11 +1,20 @@
 import { Image, StyleSheet } from 'react-native';
 import { Text, View } from '@/src/components/Themed';
 import Colors from '@/src/constants/Colors';
+import { Product } from '../types';
 
-const ProductListItem = ({ product }) => {
+// defining the types is order to prevent the bugs in the production.
+type ProductListItemProps = {
+  product: Product;
+};
+
+const ProductListItem = ({ product }: ProductListItemProps) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{ uri: product.image }} />
+      <Image
+        style={styles.image}
+        source={{ uri: product.image || undefined }}
+      />
       <Text style={styles.pizzahead}>{product.name}</Text>
       <Text style={styles.price}>$12.99</Text>
     </View>
