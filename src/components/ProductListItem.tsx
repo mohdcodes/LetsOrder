@@ -12,6 +12,7 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
   return (
     <View style={styles.container}>
       <Image
+        resizeMode="contain"
         style={styles.image}
         source={{ uri: product.image || undefined }}
       />
@@ -23,9 +24,11 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
 export default ProductListItem;
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: 'white',
     padding: 15,
     borderRadius: 20,
+    maxWidth: '50%',
   },
   title: {
     fontSize: 20,
