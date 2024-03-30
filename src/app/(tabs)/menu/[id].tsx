@@ -13,6 +13,7 @@ const ProducDetailScreen = () => {
   if (!product) {
     return <Text>Product Not Found</Text>;
   }
+  // add to cart function
   const addToCart = () => {
     console.log('aaded to cart', selectedSize);
   };
