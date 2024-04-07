@@ -3,7 +3,7 @@ import React from 'react';
 import Colors from '../constants/Colors';
 import { CartItem } from '../types';
 import { Link } from 'expo-router';
-// import { defaultPizzaImage } from '../constants/Images';
+import { defaultPizzaImage } from './ProductListItem';
 import { FontAwesome } from '@expo/vector-icons';
 import { useCart } from '../providers/CartProvider';
 
@@ -16,7 +16,7 @@ const CartListItem = ({ cartItem }: CartListItemProps) => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: cartItem.product.image || null }}
+        source={{ uri: cartItem.product.image || defaultPizzaImage }}
         style={styles.image}
         resizeMode="contain"
       />
