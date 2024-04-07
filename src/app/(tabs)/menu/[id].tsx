@@ -1,11 +1,16 @@
 // a single screen with dynamic name which is used for multi product screens.
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
-import { Stack, useLocalSearchParams } from 'expo-router';
+import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import products from '@/assets/data/products';
 import Colors from '@/src/constants/Colors';
 import Button from '@/src/components/Button';
+import { useCart } from '@/src/providers/CartProvider';
+import { PizzaSize } from '@/src/types';
+
 const ProducDetailScreen = () => {
+  const router = useRouter();
+  const { addItem } = useCart();
   const { id } = useLocalSearchParams();
   // fectching the product from the dummy data..
   const product = products.find((p) => p.id.toString() === id);
@@ -15,10 +20,14 @@ const ProducDetailScreen = () => {
   }
   // add to cart function
   const addToCart = () => {
-    console.log('aaded to cart', selectedSize);
+    if (!product) {
+      return;
+    }
+    addItem(product, selectedSize);
+    router.push('/Cart');
   };
-  const sizes = ['S', 'M', 'L', 'XL'];
-  const [selectedSize, setSelectedSize] = useState('XL');
+  const sizes: PizzaSize[] = ['S', 'M', 'L', 'XL'];
+  const [selectedSize, setSelectedSize] = useState<PizzaSize>('XL');
   return (
     <View style={styles.constainer}>
       <Stack.Screen options={{ title: product.name }} />
