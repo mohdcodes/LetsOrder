@@ -20,9 +20,8 @@ Tech Stack 👩‍💻:
 
 1.) React Native Expo ✅: Enables cross-platform development with a focus on performance and user experience.
 
-
-
 2.) TypeScript ✅: Provides static typing for enhanced code quality and developer productivity.
+
 3.) Supabase ✅: A powerful open-source alternative to Firebase, offering real-time data synchronization and scalability for the app's database needs.
 4.) Clerk ✅: Handles user authentication and authorization, ensuring secure access control and seamless user experiences.
 
