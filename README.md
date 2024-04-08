@@ -2,7 +2,7 @@ Description✅:
 
 Welcome to the Food Ordering App repository! This project utilizes React Native Expo along with TypeScript to build a dynamic and user-friendly mobile application for ordering food. Leveraging Supabase as the database solution and Clerk for authentication, this app offers robust functionality including multi-user handling with distinct roles such as admin and regular user.
 
-Features:
+Features☕:
 
 1,) User Authentication 🔓: Utilizes Clerk for secure and seamless user authentication, ensuring each user's identity is verified before accessing the app's features.
 
