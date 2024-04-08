@@ -23,6 +23,7 @@ Tech Stack 👩‍💻:
 2.) TypeScript ✅: Provides static typing for enhanced code quality and developer productivity.
 
 3.) Supabase ✅: A powerful open-source alternative to Firebase, offering real-time data synchronization and scalability for the app's database needs.
+
 4.) Clerk ✅: Handles user authentication and authorization, ensuring secure access control and seamless user experiences.
 
 Getting Started🚀:
@@ -30,8 +31,11 @@ Getting Started🚀:
 To get started with the LetsOrder APP, follow these steps:
 
 step-1) Clone the repository✅: git clone https://github.com/iamSUKUNA/LetsOrder.git
+
 step-2) Install dependencies✅: npm install
+
 ste-3) Configure Supabase and Clerk according to the setup instructions provided in the README.md file.
+
 step-4) Run the app on your preferred platform using Expo: expo start
 
 
